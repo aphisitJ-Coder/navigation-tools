@@ -69,22 +69,20 @@
             const welcome = document.getElementById('welcome');
             const buttons = document.querySelectorAll('.nav-btn');
             
-            // ซ่อนหน้า Welcome
             welcome.classList.add('hidden');
             frame.classList.remove('hidden');
 
-            // ลบ Class Active จากทุกปุ่ม
             buttons.forEach(btn => btn.classList.remove('bg-blue-600', 'text-white'));
 
-            // กำหนด URL ของ Iframe และเปลี่ยนสีปุ่ม
+            // แก้ไข src ให้ตรงตามชื่อไฟล์ใน GitHub
             if (pageId === 'final-pos') {
-                frame.src = 'Final-Checker.html';
+                frame.src = 'Final%20Checker.html'; // %20 คือช่องว่าง
                 document.getElementById('btn-final-pos').classList.add('bg-blue-600', 'text-white');
             } else if (pageId === 'quiz-master') {
-                frame.src = 'Great-Circle-Quiz-Master.html';
+                frame.src = 'Great%20Circle%20Quiz%20Master.html';
                 document.getElementById('btn-quiz-master').classList.add('bg-blue-600', 'text-white');
             } else if (pageId === 'course-dist') {
-                frame.src = 'Great-Circle-Course-Distance-Checker.html';
+                frame.src = 'Great%20Circle%20Course%20&%20Distance%20Checker.html';
                 document.getElementById('btn-course-dist').classList.add('bg-blue-600', 'text-white');
             }
         }
